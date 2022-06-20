@@ -7,6 +7,7 @@ $cl-bg2: #f6f6f6; //gris clair
 $cl-bgtown: #eaeaea; //gris plus sombre
 $cl-icn_disabled: #7e7e7e;
 $cl-bgfooter: #353535;
+$cl-menuname: #404040;
 $cl-btn-txt: #fff;
 $cl-newtxt: #008766;
 $ftsize-h1: 28px;
@@ -33,6 +34,9 @@ $ftsize-h3: 16px;
 
 .logo-wrp {
     @include basic-shadow;
+    display: flex;
+    position: relative;
+    /*padding-bottom: 10px;*/
 }
 
 .logo-box {
@@ -90,15 +94,18 @@ $ftsize-h3: 16px;
         background: linear-gradient(to bottom right, $cl-secondary, $cl-primary);
         color: $cl-btn-txt;
         text-align: center;
+        text-decoration: none;
+        display: block;
         border-radius: 20px;
         padding: 10px 10px 10px 10px;
         width: 260px;
         height: 30px;
         margin: auto;
+        transition: all 500ms;
         @include basic-shadow;
-
         &:hover {
-            cursor: pointer;
+            background: linear-gradient(to bottom right, lighten($cl-secondary, 10%), lighten($cl-primary, 10%));
+            @include basic-shadow($offy: 10px, $rgba: rgba(0,0,0,0.5) );
         }
     }
 }
@@ -271,7 +278,8 @@ $ftsize-h3: 16px;
         .coeur {
             width: 160px;
             text-align: right;
-            font-size: 24px;
+            font-size: $ftsize-h1;
+            line-height: 75px;
             position: absolute;
             right: 20px;
             &:hover .fa-grad {
@@ -343,6 +351,15 @@ $ftsize-h3: 16px;
 /                              Menus                                                /
 /----------------------------------------------------------------------------------*/
 
+.header__back {
+    position: absolute;
+    font-size: $ftsize-h1;
+    top: 20px;
+    left: 30px;
+    text-decoration: none;
+    color: black;
+}
+
 .img-restau {
 	width: 100%;
 	height: 300px;
@@ -367,25 +384,24 @@ $ftsize-h3: 16px;
     &__nameicon-wrapper {
         display: flex;
         width: 90%;
-        max-width: 650px;
         margin: 0 auto 0 auto;
         position: relative;
     }
     &__name {
         @include logo-font;
-        font-size: 36px;
+        font-size: $ftsize-h1;
         font-weight: bolder;
         font-style: italic;
         margin: 40px 0px;
     }
     &__coeur {
-        width: 53px;
-        height: 53px;
-        font-size: 36px;
-        line-height: 53px;
+        width: 47px;
+        height: 47px;
+        font-size: $ftsize-h1;
+        line-height: 47px;
         position: absolute;
         bottom: 0;
-        right: 14px;
+        right: 0;
         margin: 40px 0px;
         &:hover .fa-grad {
             transform: scale(1);
@@ -400,15 +416,36 @@ $ftsize-h3: 16px;
             transition: transform 300ms ease-in-out;
         }
     }
+    &__bouton {
+        background: linear-gradient(to bottom right, $cl-secondary, $cl-primary);
+        color: $cl-btn-txt;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        border-radius: 20px;
+        padding: 10px 10px 10px 10px;
+        width: 260px;
+        height: 30px;
+        margin: 50px auto 50px auto;
+        transition: all 500ms;
+        @include basic-shadow;
+        h2 {
+            font-size: $ftsize-h2;
+            margin: 0px;
+        }
+        &:hover {
+            background: linear-gradient(to bottom right, lighten($cl-secondary, 10%), lighten($cl-primary, 10%));
+            @include basic-shadow($offy: 10px, $rgba: rgba(0,0,0,0.5) );
+        }
+    }
 }
 
 .menu-category {
     &__name {
-        font-size: 20px;
+        font-size: $ftsize-h2;
         font-weight: normal;
-        color: #404040;
+        color: $cl-menuname;
         width: 90%;
-        max-width: 650px;
         margin : 0px auto 30px auto;
         position : relative;
         &:before {
@@ -418,32 +455,29 @@ $ftsize-h3: 16px;
             bottom  : -10px;
             height  : 1px;
             width   : 50px;
-            border-bottom: 4px solid #99E2D0;
+            border-bottom: 4px solid $cl-tertiary;
         }
     }
     &__button {
         display: flex;
         background-color: white;
         width: 90%;
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
+        margin : 0px auto 20px auto;
         border-radius: 20px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        @include basic-shadow;
         position: relative;
         &__description {
             width: 80%;
         }
         &__title {
-            font-size: 20px;
+            font-size: $ftsize-h2;
             font-weight: bold;
             margin: 0px;
             padding-top: 10px;
             padding-left: 10px;
         }
         &__subtitle {
-            font-size: 16px;
+            font-size: $ftsize-h3;
             font-weight: normal;
             margin: 0px;
             padding-top: 5px;
@@ -452,7 +486,7 @@ $ftsize-h3: 16px;
         }
         &__price {
             width: 20%;
-            font-size: 16px;
+            font-size: $ftsize-h3;
             font-weight: bold;
             text-align: right;
             margin: 0px;
@@ -462,5 +496,47 @@ $ftsize-h3: 16px;
             bottom: 0;
             right: 0;
         }
+        :hover {
+            cursor: pointer;
+        }
     }
+}
+
+/*-----------------------------Spinner---------------------------------------------*/
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes cache {
+    0% {visibility: hidden;}
+    100% {visibility: visible;}
+}
+
+.spinner {
+    @include logo-font;
+    font-size: $ftsize-h2;
+    font-weight: bolder;
+    color: $cl-btn-txt;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid $cl-tertiary;
+    border-bottom: 16px solid $cl-tertiary;
+    border-left: 16px solid #c3eee3;
+    border-right: 16px solid #c3eee3;
+    background: radial-gradient($cl-secondary, $cl-primary);
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    margin-top: -60px;
+    left: 50%;
+    margin-left: -60px;
+    animation: spin 1500ms linear 2, cache 0s 3000ms linear reverse both;
+}
+
+.full-page.hidethis {
+    animation: cache 0s 3000ms linear 1 both;
 }
