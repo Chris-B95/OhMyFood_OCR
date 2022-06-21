@@ -507,6 +507,7 @@
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
+  z-index: 1;
 }
 
 .menu-category__button__description {
@@ -530,11 +531,14 @@
   padding-left: 10px;
 }
 
-.menu-category__button__price {
+.menu-category__button__price-wrp {
   width: 20%;
+  position: relative;
+}
+
+.menu-category__button__price {
   font-size: 16px;
   font-weight: bold;
-  text-align: right;
   margin: 0px;
   padding-bottom: 10px;
   padding-right: 20px;
@@ -543,8 +547,56 @@
   right: 0;
 }
 
-.menu-category__button :hover {
+.menu-category__button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #99E2D0;
+  z-index: -1;
+  -webkit-transition: width 0.3s ease-out, opacity 0.1s linear;
+  transition: width 0.3s ease-out, opacity 0.1s linear;
+  opacity: 0;
+}
+
+.menu-category__button:hover {
   cursor: pointer;
+}
+
+.menu-category__button:hover .testcheck {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  opacity: 1;
+  right: 9%;
+}
+
+.menu-category__button:hover::after {
+  width: 20%;
+  opacity: 1;
+}
+
+.menu-category__button:hover .menu-category__button__description {
+  width: 60%;
+}
+
+.testcheck {
+  color: #fff;
+  background-color: transparent;
+  font-size: 34px;
+  position: absolute;
+  right: -200px;
+  top: 17px;
+  z-index: 1;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: opacity 0.3s linear, left 0.3s linear, -webkit-transform 2s ease-out;
+  transition: opacity 0.3s linear, left 0.3s linear, -webkit-transform 2s ease-out;
+  transition: transform 2s ease-out, opacity 0.3s linear, left 0.3s linear;
+  transition: transform 2s ease-out, opacity 0.3s linear, left 0.3s linear, -webkit-transform 2s ease-out;
+  opacity: 0;
 }
 
 /*-----------------------------Spinner---------------------------------------------*/

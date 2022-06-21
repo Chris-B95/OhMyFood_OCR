@@ -466,6 +466,7 @@ $ftsize-h3: 16px;
         border-radius: 20px;
         @include basic-shadow;
         position: relative;
+        z-index: 1;
         &__description {
             width: 80%;
         }
@@ -484,11 +485,13 @@ $ftsize-h3: 16px;
             padding-bottom: 10px;
             padding-left: 10px;
         }
-        &__price {
+        &__price-wrp {
             width: 20%;
+            position: relative;
+        }
+        &__price {
             font-size: $ftsize-h3;
             font-weight: bold;
-            text-align: right;
             margin: 0px;
             padding-bottom: 10px;
             padding-right: 20px;
@@ -496,10 +499,48 @@ $ftsize-h3: 16px;
             bottom: 0;
             right: 0;
         }
-        :hover {
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 0%;
+            border-radius: 0px 20px 20px 0px;
+            background-color: $cl-tertiary;
+            z-index: -1;
+            transition: width 0.3s ease-out, opacity 0.1s linear;
+            opacity: 0;
+        }
+        &:hover {
             cursor: pointer;
+            .testcheck {
+                transform: rotate(720deg);
+                opacity: 1;
+                right: 9%;
+            }
+            &::after {
+                width: 20%;
+                opacity: 1;
+            }
+            .menu-category__button__description {
+                width: 60%;
+            }
         }
     }
+}
+
+.testcheck {
+    color: $cl-btn-txt;
+	background-color: transparent;
+	font-size: 34px;
+	position: absolute;
+	right: -200px;
+    top: 17px;
+	z-index: 1;
+	transform: rotate(0deg);
+	transition: transform 2s ease-out, opacity 0.3s linear, left 0.3s linear;
+	opacity: 0
 }
 
 /*-----------------------------Spinner---------------------------------------------*/
