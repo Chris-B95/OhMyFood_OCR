@@ -1,0 +1,21 @@
+body {
+    @include main-font;
+    color: $black;
+    font-size: 1.6rem;
+}
+
+h1 {
+    @include main-font;
+    font-size: $ftsize-h1;
+}
+
+h2 {
+    @include main-font;
+    font-size: $ftsize-h2;
+}
+
+h3,
+p {
+    @include main-font;
+    font-size: $ftsize-h3;
+}

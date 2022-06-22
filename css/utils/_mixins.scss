@@ -1,0 +1,11 @@
+@mixin main-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin logo-font {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin basic-shadow($offx: 0, $offy: 4px, $blur: 8px, $extend: 0, $rgba: rgba(0, 0, 0, 0.2)) {
+    box-shadow: $offx $offy $blur $extend $rgba;
+}

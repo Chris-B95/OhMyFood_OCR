@@ -1,0 +1,33 @@
+.footer {
+    background-color: $cl-bgfooter;
+    padding: 1rem 0;
+
+    h2 {
+        @include logo-font;
+        color: $white;
+        font-weight: bolder;
+        width: 90%;
+        margin: 0 auto 1rem auto;
+    }
+}
+
+.navfoot {
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+
+.foot-items {
+    list-style-type: none;
+
+    span {
+        margin: 0 1rem 0 0;
+    }
+
+    &__link {
+        color: $white;
+        display: block;
+        font-size: $ftsize-h3;
+        font-weight: normal;
+        margin: 0 0 1rem 0;
+    }
+}

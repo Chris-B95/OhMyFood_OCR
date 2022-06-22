@@ -1,0 +1,37 @@
+/*-----------------------------Spinner---------------------------------------------*/
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes cache {
+    0% {visibility: hidden;}
+    100% {visibility: visible;}
+}
+
+.spinner {
+    @include logo-font;
+    font-size: $ftsize-h2;
+    font-weight: bolder;
+    color: $cl-btn-txt;
+    border-radius: 50%;
+    border-top: 1.6rem solid $cl-tertiary;
+    border-bottom: 1.6rem solid $cl-tertiary;
+    border-left: 1.6rem solid $cl-spin-secondary;
+    border-right: 1.6rem solid $cl-spin-secondary;
+    background: radial-gradient($cl-secondary, $cl-primary);
+    width: 15.2rem;
+    height: 15.2rem;
+    line-height: 12rem;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    margin-top: -60px;
+    left: 50%;
+    margin-left: -60px;
+    animation: spin 1000ms linear 2, cache 0s 2100ms linear reverse both;
+}
+
+.full-page.hidethis {
+    animation: cache 0s 2100ms linear 1 both;
+}
