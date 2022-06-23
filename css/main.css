@@ -43,6 +43,83 @@ p {
   font-size: 1.6rem;
 }
 
+@-webkit-keyframes slidingmenus {
+  0% {
+    transform: translateY(100vh);
+  }
+  /*50% {transform: translateY(20vh);}*/
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes slidingmenus {
+  0% {
+    transform: translateY(100vh);
+  }
+  /*50% {transform: translateY(20vh);}*/
+  100% {
+    transform: translateY(0vh);
+  }
+}
+.sliding-menu {
+  transform: translateY(100vh);
+  -webkit-animation: slidingmenus 1800ms 0s ease-out forwards 1;
+          animation: slidingmenus 1800ms 0s ease-out forwards 1;
+}
+.sliding-menu--1 {
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
+}
+.sliding-menu--2 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.sliding-menu--3 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.sliding-menu--4 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.sliding-menu--5 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+.sliding-menu--6 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.sliding-menu--7 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+.sliding-menu--8 {
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+.sliding-menu--9 {
+  -webkit-animation-delay: 1600ms;
+          animation-delay: 1600ms;
+}
+.sliding-menu--10 {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+.sliding-menu--11 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.sliding-menu--12 {
+  -webkit-animation-delay: 2200ms;
+          animation-delay: 2200ms;
+}
+.sliding-menu--13 {
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+}
+
 .cards-wrp {
   display: flex;
   flex-direction: column;
@@ -181,6 +258,14 @@ p {
           animation: cache 0s 2100ms linear 1 both;
 }
 
+input[type=search] {
+  border: none;
+  font-size: 1.6rem;
+  position: relative;
+  right: -2.2rem;
+  background-color: hsl(0deg, 0%, 92%);
+}
+
 .full-page {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -250,14 +335,14 @@ p {
 }
 .reservation__ville {
   background-color: hsl(0deg, 0%, 92%);
-  text-align: center;
+  margin: 0 auto;
   padding: 1rem 0;
   display: flex;
   justify-content: center;
 }
 .reservation__ville .fa-location-dot {
   position: relative;
-  left: -2rem;
+  right: -1.2rem;
   color: hsl(0deg, 0%, 21%);
 }
 .reservation__texte {
