@@ -9,3 +9,15 @@
 @mixin basic-shadow($offx: 0, $offy: 4px, $blur: 8px, $extend: 0, $rgba: rgba(0, 0, 0, 0.2)) {
     box-shadow: $offx $offy $blur $extend $rgba;
 }
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-width) and (max-width: ($desktop-width - 1px)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-width) {
+        @content;
+    }
+}

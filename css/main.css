@@ -124,6 +124,15 @@ p {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1024px) {
+  .cards-wrp {
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
 
 .card-restau {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -195,6 +204,13 @@ p {
   /*transform-origin: bottom;*/
   transform: scale(0);
   transition: transform 500ms ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .card-restau {
+    width: 30%;
+    min-width: 40rem;
+    margin: 0 3rem 2rem 0;
+  }
 }
 
 /*-----------------------------Spinner---------------------------------------------*/
@@ -308,10 +324,25 @@ input[type=search] {
   width: 90%;
   margin: 0 auto 1rem auto;
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    padding: 2rem 5%;
+  }
+  .footer h2 {
+    width: 20%;
+    margin: 0 auto;
+  }
+}
 
 .navfoot {
   width: 90%;
   margin: 0 auto 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .navfoot {
+    width: 80%;
+  }
 }
 
 .foot-items {
@@ -326,6 +357,15 @@ input[type=search] {
   font-size: 1.6rem;
   font-weight: normal;
   margin: 0 0 1rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .foot-items {
+    display: flex;
+    justify-content: right;
+  }
+  .foot-items__link {
+    margin: 0 2rem;
+  }
 }
 
 /*---------------------------Reservation------------------------------------------*/
@@ -358,6 +398,11 @@ input[type=search] {
 .reservation__texte p {
   margin: 0 0 2rem 0;
 }
+@media screen and (min-width: 1024px) {
+  .reservation__texte {
+    width: 90%;
+  }
+}
 .reservation__bouton {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom right, hsl(317deg, 100%, 74%), hsl(267deg, 66%, 60%));
@@ -376,6 +421,11 @@ input[type=search] {
   background: linear-gradient(to bottom right, #ffade8, #ad80e5);
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.5);
 }
+@media screen and (min-width: 1024px) {
+  .reservation__bouton {
+    width: 48rem;
+  }
+}
 
 /*--------------------------------------------------------------------------------*/
 /*---------------------------Navigation-------------------------------------------*/
@@ -387,12 +437,30 @@ input[type=search] {
   width: 90%;
   margin: 0 auto 2rem auto;
 }
+@media screen and (min-width: 1024px) {
+  .nav-accueil {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .nav-accueil h1 {
+    width: 100%;
+    margin: 0;
+  }
+}
 
 .boutons-wrp {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .boutons-wrp {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .bouton-nav {
@@ -439,6 +507,13 @@ input[type=search] {
   line-height: 6rem;
   position: relative;
   left: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  .bouton-nav {
+    width: 30%;
+    min-width: 32rem;
+    margin: 2rem 3rem 0 0;
+  }
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -542,6 +617,11 @@ input[type=search] {
   width: 5rem;
   border-bottom: 0.4rem solid hsl(165deg, 56%, 74%);
 }
+@media screen and (min-width: 1024px) {
+  .menu-category__name {
+    width: 100%;
+  }
+}
 .menu-category__button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -605,7 +685,26 @@ input[type=search] {
 .menu-category__button:hover .menu-category__button__description {
   width: 60%;
 }
+@media screen and (min-width: 1024px) {
+  .menu-category__button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-category {
+    width: 30%;
+  }
+}
 
+@media screen and (min-width: 1024px) {
+  .menu-category-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex: 1 1 0;
+  }
+}
 .testcheck {
   color: hsl(0deg, 0%, 100%);
   background-color: transparent;

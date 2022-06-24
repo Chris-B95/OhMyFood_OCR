@@ -1,6 +1,7 @@
 .img-restau {
-	width: 100%;
-	height: 30rem;
+    width: 100%;
+    height: 30rem;
+
     img {
         width: 100%;
         height: 100%;
@@ -12,34 +13,39 @@
 }
 
 .full-menu {
-	width: 100%;
-	margin: auto;
-	background-color: $cl-bg2;
-	padding-bottom: 5rem;
-	border-radius: 6rem 6rem 0 0;
-	position: relative;
-	z-index: 1;
+    width: 100%;
+    margin: auto;
+    background-color: $cl-bg2;
+    padding-bottom: 5rem;
+    border-radius: 6rem 6rem 0 0;
+    position: relative;
+    z-index: 1;
+
     &__nameicon-wrapper {
         display: flex;
         width: 90%;
         margin: 0 auto 0 auto;
         position: relative;
     }
+
     &__name {
         @include logo-font;
         font-weight: bolder;
         font-style: italic;
         margin: 4rem 0;
     }
+
     &__coeur {
         font-size: $ftsize-h1;
         position: absolute;
         bottom: 0.7rem; // L'icone est moins haute que le titre pour la meme font...
         right: 2rem;
         margin: 4rem 0;
+
         &:hover .fa-grad {
             transform: scale(1);
         }
+
         .fa-grad {
             color: transparent;
             background-clip: text;
@@ -50,6 +56,7 @@
             transition: transform 500ms ease-in-out;
         }
     }
+
     &__bouton {
         @include basic-shadow;
         background: linear-gradient(to bottom right, $cl-secondary, $cl-primary);
@@ -63,9 +70,10 @@
         line-height: 3rem;
         margin: 5rem auto;
         transition: all 500ms;
+
         &:hover {
             background: linear-gradient(to bottom right, lighten($cl-secondary, 10%), lighten($cl-primary, 10%));
-            @include basic-shadow($offy: 10px, $rgba: rgba(0,0,0,0.5) );
+            @include basic-shadow($offy: 10px, $rgba: rgba(0, 0, 0, 0.5));
         }
     }
 }
@@ -75,44 +83,55 @@
         font-weight: normal;
         color: $cl-menuname;
         width: 90%;
-        margin : 0 auto 3rem auto;
-        position : relative;
+        margin: 0 auto 3rem auto;
+        position: relative;
+
         &:before {
-            content : "";
+            content: "";
             position: absolute;
-            left    : 0;
-            bottom  : -1rem;
-            height  : 0.1rem;
-            width   : 5rem;
+            left: 0;
+            bottom: -1rem;
+            height: 0.1rem;
+            width: 5rem;
             border-bottom: 0.4rem solid $cl-tertiary;
         }
+
+        @include desktop {
+            width: 100%;
+        }
     }
+
     &__button {
         @include basic-shadow;
         display: flex;
         background-color: $white;
         width: 90%;
-        margin : 0 auto 2rem auto;
+        margin: 0 auto 2rem auto;
         border-radius: 2rem;
         position: relative;
         z-index: 1;
+
         &__description {
             width: 80%;
         }
+
         &__title {
             font-size: $ftsize-h2;
             font-weight: bold;
             padding: 1rem 0 0 1rem;
         }
+
         &__subtitle {
             font-size: $ftsize-h3;
             font-weight: normal;
             padding: 0.5rem 0 1rem 1rem;
         }
+
         &__price-wrp {
             width: 20%;
             position: relative;
         }
+
         &__price {
             font-size: $ftsize-h3;
             font-weight: bold;
@@ -121,6 +140,7 @@
             bottom: 0;
             right: 0;
         }
+
         &::after {
             position: absolute;
             content: "";
@@ -134,33 +154,55 @@
             transition: width 0.3s ease-out, opacity 0.1s linear;
             opacity: 0;
         }
+
         &:hover {
             cursor: pointer;
+
             .testcheck {
                 transform: rotate(720deg);
                 opacity: 1;
                 right: 9%;
             }
+
             &::after {
                 width: 20%;
                 opacity: 1;
             }
+
             .menu-category__button__description {
                 width: 60%;
             }
         }
+
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    @include desktop {
+        width: 30%;
+    }
+}
+
+@include desktop {
+    .menu-category-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex: 1 1 0;
     }
 }
 
 .testcheck {
     color: $cl-btn-txt;
-	background-color: transparent;
-	font-size: $ftsize-check;
-	position: absolute;
-	right: -20rem;
+    background-color: transparent;
+    font-size: $ftsize-check;
+    position: absolute;
+    right: -20rem;
     top: 1.7rem;
-	z-index: 1;
-	transform: rotate(0deg);
-	transition: transform 2s ease-out, opacity 0.3s linear, left 0.3s linear;
-	opacity: 0
+    z-index: 1;
+    transform: rotate(0deg);
+    transition: transform 2s ease-out, opacity 0.3s linear, left 0.3s linear;
+    opacity: 0
 }

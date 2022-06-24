@@ -1,6 +1,13 @@
 .cards-wrp {
     display: flex;
     flex-direction: column;
+    @include desktop {
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
 }
 
 .card-restau {
@@ -81,5 +88,10 @@
                 transition: transform 500ms ease-in-out;
             }
         }
+    }
+    @include desktop {
+        width: 30%;
+        min-width: 40rem;
+        margin: 0 3rem 2rem 0;
     }
 }
