@@ -10,6 +10,15 @@
         margin: 0 auto 1rem auto;
     }
 
+    @include tablet {
+        display: flex;
+        padding: 2rem 5%;
+        h2 {
+            width: 20%;
+            margin: 0 auto;
+        }
+    }
+
     @include desktop {
         display: flex;
         padding: 2rem 5%;
@@ -23,6 +32,11 @@
 .navfoot {
     width: 90%;
     margin: 0 auto 0 auto;
+    @include tablet {
+        width: 80%;
+        text-align: right;
+        text-align-last: right;
+    }
     @include desktop {
         width: 80%;
     }
@@ -41,6 +55,14 @@
         font-size: $ftsize-h3;
         font-weight: normal;
         margin: 0 0 1rem 0;
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: right;
+        &__link {
+            margin: 0 2rem;
+        }
     }
 
     @include desktop {

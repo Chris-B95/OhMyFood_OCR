@@ -25,10 +25,8 @@
     line-height: 12rem;
     text-align: center;
     position: fixed;
-    top: 50%;
-    margin-top: -60px;
-    left: 50%;
-    margin-left: -60px;
+    top: calc(50% - 7.6rem);
+    left: calc(50% - 7.6rem);
     animation: spin 1000ms linear 2, cache 0s 2100ms linear reverse both;
 }
 

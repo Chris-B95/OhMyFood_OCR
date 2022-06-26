@@ -119,6 +119,10 @@ p {
   -webkit-animation-delay: 2400ms;
           animation-delay: 2400ms;
 }
+.sliding-menu--14 {
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
+}
 
 .cards-wrp {
   display: flex;
@@ -262,10 +266,8 @@ p {
   line-height: 12rem;
   text-align: center;
   position: fixed;
-  top: 50%;
-  margin-top: -60px;
-  left: 50%;
-  margin-left: -60px;
+  top: calc(50% - 7.6rem);
+  left: calc(50% - 7.6rem);
   animation: spin 1000ms linear 2, cache 0s 2100ms linear reverse both;
 }
 
@@ -324,6 +326,16 @@ input[type=search] {
   width: 90%;
   margin: 0 auto 1rem auto;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    display: flex;
+    padding: 2rem 5%;
+  }
+  .footer h2 {
+    width: 20%;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footer {
     display: flex;
@@ -338,6 +350,14 @@ input[type=search] {
 .navfoot {
   width: 90%;
   margin: 0 auto 0 auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navfoot {
+    width: 80%;
+    text-align: right;
+    -moz-text-align-last: right;
+         text-align-last: right;
+  }
 }
 @media screen and (min-width: 1024px) {
   .navfoot {
@@ -357,6 +377,15 @@ input[type=search] {
   font-size: 1.6rem;
   font-weight: normal;
   margin: 0 0 1rem 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .foot-items {
+    display: flex;
+    justify-content: right;
+  }
+  .foot-items__link {
+    margin: 0 2rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .foot-items {
@@ -398,6 +427,11 @@ input[type=search] {
 .reservation__texte p {
   margin: 0 0 2rem 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .reservation__texte {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .reservation__texte {
     width: 90%;
@@ -420,6 +454,11 @@ input[type=search] {
 .reservation__bouton:hover {
   background: linear-gradient(to bottom right, #ffade8, #ad80e5);
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .reservation__bouton {
+    width: 48rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .reservation__bouton {
@@ -530,7 +569,7 @@ input[type=search] {
 /*--------------------------------------------------------------------------------*/
 .img-restau {
   width: 100%;
-  height: 30rem;
+  height: 20rem;
 }
 .img-restau img {
   width: 100%;
@@ -540,6 +579,16 @@ input[type=search] {
   transform-origin: top;
   transform: scaleY(1.2);
   z-index: -1;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .img-restau {
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .img-restau {
+    height: 30rem;
+  }
 }
 
 .full-menu {
@@ -569,6 +618,9 @@ input[type=search] {
   bottom: 0.7rem;
   right: 2rem;
   margin: 4rem 0;
+}
+.full-menu__coeur:hover {
+  cursor: pointer;
 }
 .full-menu__coeur:hover .fa-grad {
   transform: scale(1);
@@ -674,13 +726,22 @@ input[type=search] {
   cursor: pointer;
 }
 .menu-category__button:hover .testcheck {
-  transform: rotate(720deg);
+  transform: rotate(360deg);
   opacity: 1;
-  right: 9%;
 }
 .menu-category__button:hover::after {
   width: 20%;
   opacity: 1;
+}
+.menu-category__button:hover .menu-category__button__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu-category__button:hover .menu-category__button__subtitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu-category__button:hover .menu-category__button__description {
   width: 60%;
@@ -710,10 +771,10 @@ input[type=search] {
   background-color: transparent;
   font-size: 3.4rem;
   position: absolute;
-  right: -20rem;
-  top: 1.7rem;
+  top: calc(50% - 20px);
+  right: calc(10% - 17px);
   z-index: 1;
   transform: rotate(0deg);
-  transition: transform 2s ease-out, opacity 0.3s linear, left 0.3s linear;
+  transition: transform 700ms ease-in-out, opacity 0.3s linear;
   opacity: 0;
 }/*# sourceMappingURL=main.css.map */

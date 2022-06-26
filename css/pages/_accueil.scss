@@ -28,6 +28,9 @@
         p {
             margin: 0 0 2rem 0;
         }
+        @include tablet {
+            width: 90%;
+        }
         @include desktop {
             width: 90%;
         }
@@ -49,6 +52,9 @@
         &:hover {
             background: linear-gradient(to bottom right, lighten($cl-secondary, 10%), lighten($cl-primary, 10%));
             @include basic-shadow($offy: 10px, $rgba: rgba(0,0,0,0.5) );
+        }
+        @include tablet {
+            width: 48rem;
         }
         @include desktop {
             width: 48rem;
