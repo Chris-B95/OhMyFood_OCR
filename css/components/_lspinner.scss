@@ -27,9 +27,9 @@
     position: fixed;
     top: calc(50% - 7.6rem);
     left: calc(50% - 7.6rem);
-    animation: spin 1000ms linear 2, cache 0s 2100ms linear reverse both;
+    animation: spin 500ms linear 2, cache 0s 1100ms linear reverse both;
 }
 
 .full-page.hidethis {
-    animation: cache 0s 2100ms linear 1 both;
+    animation: cache 0s 1100ms linear 1 both;
 }

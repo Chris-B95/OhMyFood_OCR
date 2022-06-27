@@ -212,7 +212,7 @@ p {
 @media screen and (min-width: 1024px) {
   .card-restau {
     width: 30%;
-    min-width: 40rem;
+    /*min-width: 40rem;*/
     margin: 0 3rem 2rem 0;
   }
 }
@@ -268,12 +268,12 @@ p {
   position: fixed;
   top: calc(50% - 7.6rem);
   left: calc(50% - 7.6rem);
-  animation: spin 1000ms linear 2, cache 0s 2100ms linear reverse both;
+  animation: spin 500ms linear 2, cache 0s 1100ms linear reverse both;
 }
 
 .full-page.hidethis {
-  -webkit-animation: cache 0s 2100ms linear 1 both;
-          animation: cache 0s 2100ms linear 1 both;
+  -webkit-animation: cache 0s 1100ms linear 1 both;
+          animation: cache 0s 1100ms linear 1 both;
 }
 
 input[type=search] {
