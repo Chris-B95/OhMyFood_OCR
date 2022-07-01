@@ -14,6 +14,11 @@ h2 {
     font-size: $ftsize-h2;
 }
 
+h2.h1size {
+    @include main-font;
+    font-size: $ftsize-h1;
+}
+
 h3,
 p {
     @include main-font;
