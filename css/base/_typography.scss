@@ -24,3 +24,26 @@ p {
     @include main-font;
     font-size: $ftsize-h3;
 }
+
+@include verysmall {
+    body {
+        font-size: 1.4rem;
+    }
+    
+    h1 {
+        font-size: $ftsize-h1xs;
+    }
+    
+    h2 {
+        font-size: $ftsize-h2xs;
+    }
+    
+    h2.h1size {
+        font-size: $ftsize-h1xs;
+    }
+    
+    h3,
+    p {
+        font-size: $ftsize-h3xs;
+    }
+}

@@ -146,6 +146,9 @@
         line-height: 6rem;
         position: relative;
         left: 3rem;
+        @include verysmall {
+            font-size: $ftsize-h2xs;
+        }
     }
 
     @include desktop {
